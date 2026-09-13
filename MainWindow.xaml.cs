@@ -39,23 +39,72 @@ public partial class MainWindow : Window
         DisplayMenu menuPage = new DisplayMenu();
         MainFrame.Navigate(menuPage);
 
+        string MenuResult;
 
-        /* ENGINE SELECTION MENU */
-        string result = await thunderfield_wingman.Methods.Menu.InitMenu(
-            "Menu title:",
-            new string[]
+        while (true)
+        {
+            menuPage = new DisplayMenu();
+            MainFrame.Navigate(menuPage);
+
+            MenuResult = await thunderfield_wingman.Methods.Menu.InitMenu(
+                "2 ENGINES FOUND:",
+                new string[]
+                {
+                    "<Label Content=\"0   ROTAX 914F TURBO - 1200CC\" HorizontalAlignment=\"Left\" Margin=\"10,36,0,0\" Foreground=\"#66ff66\" FontFamily=\"/Thunderfield-Wingman;component/Fonts/#MS33558 Slim\" FontSize=\"15\"/>",
+                    "<Label Content=\"1   HONEYWELL TPE331-10/12/14 TURBOPROP - ??\" HorizontalAlignment=\"Left\" Margin=\"10,55,0,0\" Foreground=\"#66ff66\" FontFamily=\"/Thunderfield-Wingman;component/Fonts/#MS33558 Slim\" FontSize=\"15\"/>",
+                    "<Label Content=\"*   CREATE NEW ENGINE\" HorizontalAlignment=\"Left\" Margin=\"10,74,0,0\" Foreground=\"#66ff66\" FontFamily=\"/Thunderfield-Wingman;component/Fonts/#MS33558 Slim\" FontSize=\"15\"/>"
+                },
+                menuPage.DisplayGrid
+            );
+
+            if (MenuResult == "0")
             {
-            "<Label Content=\"1  ROTAX 914F TURBO - 1200CC\" HorizontalAlignment=\"Left\" Margin=\"10,36,0,0\" Foreground=\"#66ff66\" FontFamily=\"/Thunderfield-Wingman;component/Fonts/#MS33558 Slim\" FontSize=\"15\"/>",
-            "<Label Content=\"2  HONEYWELL TPE331-10/12/14 TURBOPROP - ?? \" HorizontalAlignment=\"Left\" Margin=\"10,55,0,0\" Foreground=\"#66ff66\" FontFamily=\"/Thunderfield-Wingman;component/Fonts/#MS33558 Slim\" FontSize=\"15\"/>",
-            "<Label Content=\"*  CREATE NEW ENGINE\" HorizontalAlignment=\"Left\" Margin=\"10,74,0,0\" Foreground=\"#66ff66\" FontFamily=\"/Thunderfield-Wingman;component/Fonts/#MS33558 Slim\" FontSize=\"15\"/>"
+                MainFrame.Navigate(new Aligning());
+                await Task.Delay(7200);
+                break;
+            }
 
-            },
-            menuPage.DisplayGrid
-        );
+            if (MenuResult == "1")
+            {
+                MessageBox.Show("HONEYWELL TPE331-10/12/14 not yet configured!");
+                continue;
+            }
 
-        MainFrame.Navigate(new Aligning());
+            if (MenuResult == "*")
+            {
+                MessageBox.Show("This feature not yet available!");
+                continue;
+            }
+        }
 
+        /* TELEMETRY SELECTION MENU */
+        while (true)
+        {
+            menuPage = new DisplayMenu();
+            MainFrame.Navigate(menuPage);
 
+            MenuResult = await thunderfield_wingman.Methods.Menu.InitMenu(
+                "SELECT TELEMETRY FEED TYPE:",
+                new string[]
+                {
+                    "<Label Content=\"0   REAL-TIME TELEMETRY ( 360 Hz )\" HorizontalAlignment=\"Left\" Margin=\"10,36,0,0\" Foreground=\"#66ff66\" FontFamily=\"/Thunderfield-Wingman;component/Fonts/#MS33558 Slim\" FontSize=\"15\"/>",
+                    "<Label Content=\"*   UPLOAD MISSION DAT -- GCS\" HorizontalAlignment=\"Left\" Margin=\"10,55,0,0\" Foreground=\"#66ff66\" FontFamily=\"/Thunderfield-Wingman;component/Fonts/#MS33558 Slim\" FontSize=\"15\"/>"
+                },
+                menuPage.DisplayGrid
+            );
+
+            if (MenuResult == "0")
+            {
+                
+                break;
+            }
+
+            if (MenuResult == "*")
+            {
+                MessageBox.Show("Nigga fucked you!");
+                break;
+            }
+        }
 
     }
 }

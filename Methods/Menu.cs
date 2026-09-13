@@ -20,7 +20,6 @@ namespace thunderfield_wingman.Methods
         {
             targetGrid.Children.Clear();
 
-            // Menu title
             Label title = new Label
             {
                 Content = menuTitle,
@@ -35,7 +34,6 @@ namespace thunderfield_wingman.Methods
 
             targetGrid.Children.Add(title);
 
-            // Menu items
             foreach (string xaml in menuItems)
             {
                 string fullXaml = xaml.Replace(
@@ -46,12 +44,10 @@ namespace thunderfield_wingman.Methods
                 targetGrid.Children.Add(element);
             }
 
-            // Wait for keyboard input
             string userInput = await WaitForInput(targetGrid);
 
             int index;
 
-            // Number input
             if (int.TryParse(userInput, out index))
             {
                 if (index >= 0 && index < menuItems.Length)
@@ -59,12 +55,11 @@ namespace thunderfield_wingman.Methods
                     if (targetGrid.Children[index + 1] is Control selected)
                     {
                         selected.Foreground = new SolidColorBrush(
-                            (Color)ColorConverter.ConvertFromString("#ff10f0"));
+                            (Color)ColorConverter.ConvertFromString("#ff00fb"));
                     }
                 }
             }
 
-            // "*" selects last menu item
             else if (userInput == "*")
             {
                 if (targetGrid.Children.Count > 1)
@@ -72,7 +67,7 @@ namespace thunderfield_wingman.Methods
                     if (targetGrid.Children[targetGrid.Children.Count - 1] is Control selected)
                     {
                         selected.Foreground = new SolidColorBrush(
-                            (Color)ColorConverter.ConvertFromString("#ff00ff"));
+                            (Color)ColorConverter.ConvertFromString("#ff00fb"));
                     }
                 }
             }
