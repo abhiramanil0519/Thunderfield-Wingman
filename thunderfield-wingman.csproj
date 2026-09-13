@@ -10,10 +10,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Fonts\MS33558C.otf" />
     <None Remove="thunderfield_banner.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Fonts\MS33558C.otf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\thunderfield_banner.png" />
   </ItemGroup>
 
