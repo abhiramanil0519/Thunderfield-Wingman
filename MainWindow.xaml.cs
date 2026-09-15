@@ -60,7 +60,7 @@ public partial class MainWindow : Window
             if (MenuResult == "0")
             {
                 MainFrame.Navigate(new Aligning());
-                await Task.Delay(7200);
+                await Task.Delay(1500);
                 break;
             }
 
@@ -88,22 +88,25 @@ public partial class MainWindow : Window
                 new string[]
                 {
                     "<Label Content=\"0   REAL-TIME TELEMETRY ( 360 Hz )\" HorizontalAlignment=\"Left\" Margin=\"10,36,0,0\" Foreground=\"#66ff66\" FontFamily=\"/Thunderfield-Wingman;component/Fonts/#MS33558 Slim\" FontSize=\"15\"/>",
-                    "<Label Content=\"*   UPLOAD MISSION DAT -- GCS\" HorizontalAlignment=\"Left\" Margin=\"10,55,0,0\" Foreground=\"#66ff66\" FontFamily=\"/Thunderfield-Wingman;component/Fonts/#MS33558 Slim\" FontSize=\"15\"/>"
+                    "<Label Content=\"*   UPLOAD MISSION DAT -- GCS      [ _ _  / _ _ _  ]\" HorizontalAlignment=\"Left\" Margin=\"10,55,0,0\" Foreground=\"#66ff66\" FontFamily=\"/Thunderfield-Wingman;component/Fonts/#MS33558 Slim\" FontSize=\"15\"/>"
                 },
                 menuPage.DisplayGrid
             );
 
             if (MenuResult == "0")
             {
-                
+                MainFrame.Navigate(new RealTimeTEelemetry());
+
                 break;
             }
 
             if (MenuResult == "*")
             {
-                MessageBox.Show("Nigga fucked you!");
-                break;
+                // mission.dat
+                continue;
             }
+
+
         }
 
     }

@@ -8,6 +8,8 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Markup;
 using System.Windows.Media;
+using System.Windows.Navigation;
+using thunderfield_wingman.Pages;
 
 namespace thunderfield_wingman.Methods
 {
@@ -103,5 +105,36 @@ namespace thunderfield_wingman.Methods
 
             return tcs.Task;
         }
+
+
+        public static void CustomMenu(FrameworkElement host, Label[] labels, Key[] keys, Page[] nextPages)
+        {
+            host.Focusable = true;
+            host.Focus();
+
+            host.KeyDown += async (sender, e) =>
+            {
+                for (int i = 0; i < keys.Length; i++)
+                {
+                    if (e.Key == keys[i])
+                    {
+                        Label label = labels[i];
+                        Page nextPage = nextPages[i];
+
+                        label.Foreground = new SolidColorBrush(
+                            (Color)ColorConverter.ConvertFromString("#ff00fb"));
+
+                        await Task.Delay(500);
+
+                        NavigationService.GetNavigationService(host)?.Navigate(nextPage);
+
+                        break;
+                    }
+                }
+            };
+        }
+
+
+
     }
 }

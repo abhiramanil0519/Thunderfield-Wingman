@@ -5,11 +5,12 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:thunderfield_wingman"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="450
+      "
       Title="Boot">
 
     <Grid Background="Black">
-        <Image Margin="90,66,90,66" Source="/Resources/thunderfield_banner.png"/>
+        <Image Margin="0,0,0,2" Source="/Resources/thunderfield_banner.png"/>
 
     </Grid>
 </Page>

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using thunderfield_wingman.Methods;
 
 namespace thunderfield_wingman.Pages
 {
@@ -23,6 +24,13 @@ namespace thunderfield_wingman.Pages
         public RealTimeTEelemetry()
         {
             InitializeComponent();
+
+            thunderfield_wingman.Methods.Menu.CustomMenu(
+                this,
+                new Label[] { CCA },
+                new Key[] { Key.D0 },
+                new Page[] { new CCA() }
+            );
         }
     }
 }

@@ -1,0 +1,45 @@
+﻿<Page x:Class="thunderfield_wingman.Pages.RealTimeTEelemetry"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:thunderfield_wingman.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="450"
+      Title="RealTimeTEelemetry">
+
+    <Grid Background="Black">
+        <Label Content="TELEMETRY ( 360 HZ )" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="15" Foreground="#000000" Background="White" FontFamily="/Thunderfield-Wingman;component/Fonts/#MS33558 Slim" Width="146" Height="25"/>
+
+        <Label x:Name="EngineRPM" Content="ENGINE RPM       : " HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15" Foreground="#66ff66" FontFamily="/Thunderfield-Wingman;component/Fonts/#MS33558 Slim" Margin="10,36,0,0" Width="215"/>
+        <Label x:Name="CylHeadTemp" Content="CYL HEAD TMP  :" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15" Foreground="#66ff66" FontFamily="/Thunderfield-Wingman;component/Fonts/#MS33558 Slim" Margin="10,56,0,0" Width="215"/>
+        <Label x:Name="ExhaustGasTemp" Content="EGT TMP               :" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15" Foreground="#66ff66" FontFamily="/Thunderfield-Wingman;component/Fonts/#MS33558 Slim" Margin="10,76,0,0" Width="215"/>
+        <Label x:Name="OilTemp" Content="OIL TMP                :" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15" Foreground="#66ff66" FontFamily="/Thunderfield-Wingman;component/Fonts/#MS33558 Slim" Margin="10,96,0,0" Width="215"/>
+        <Label x:Name="OilPress" Content="OIL PREss          :" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15" Foreground="#66ff66" FontFamily="/Thunderfield-Wingman;component/Fonts/#MS33558 Slim" Margin="10,116,0,0" Width="215"/>
+        <Label x:Name="FuelFlow" Content="fuel flow        :" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15" Foreground="#66ff66" FontFamily="/Thunderfield-Wingman;component/Fonts/#MS33558 Slim" Margin="10,136,0,0" Width="215"/>
+        <Label x:Name="FuelPress" Content="fuel press      :" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15" Foreground="#66ff66" FontFamily="/Thunderfield-Wingman;component/Fonts/#MS33558 Slim" Margin="10,157,0,0" Width="215"/>
+        <Label x:Name="InjectorTrend" Content="injEct TREND   :" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15" Foreground="#66ff66" FontFamily="/Thunderfield-Wingman;component/Fonts/#MS33558 Slim" Margin="10,178,0,0" Width="215"/>
+        <Label x:Name="AFR" Content="AFR                        :" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15" Foreground="#66ff66" FontFamily="/Thunderfield-Wingman;component/Fonts/#MS33558 Slim" Margin="10,199,0,0" Width="215"/>
+        <Label x:Name="ManifoldPress" Content="manif Press    :" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15" Foreground="#66ff66" FontFamily="/Thunderfield-Wingman;component/Fonts/#MS33558 Slim" Margin="10,220,0,0" Width="215"/>
+        <Label x:Name="CarbAirIntakePress" Content="CAI  press         :" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15" Foreground="#66ff66" FontFamily="/Thunderfield-Wingman;component/Fonts/#MS33558 Slim" Margin="10,239,0,0" Width="215"/>
+        <Label x:Name="BaroPress" Content="BAR press        :" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15" Foreground="#66ff66" FontFamily="/Thunderfield-Wingman;component/Fonts/#MS33558 Slim" Margin="10,259,0,0" Width="215"/>
+
+        <Label x:Name="CoolantFlow" Content="COOLANT FLW   : " HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15" Foreground="#66ff66" FontFamily="/Thunderfield-Wingman;component/Fonts/#MS33558 Slim" Margin="218,36,0,0" Width="215"/>
+        <Label x:Name="CoolantTemp" Content="COOLANT TMP   :" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15" Foreground="#66ff66" FontFamily="/Thunderfield-Wingman;component/Fonts/#MS33558 Slim" Margin="218,56,0,0" Width="215"/>
+        <Label x:Name="CoolantPress" Content="COOL PRESS      :" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15" Foreground="#66ff66" FontFamily="/Thunderfield-Wingman;component/Fonts/#MS33558 Slim" Margin="218,76,0,0" Width="215"/>
+        <Label x:Name="FuelLevel" Content="FUEL LEVEL      :" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15" Foreground="#66ff66" FontFamily="/Thunderfield-Wingman;component/Fonts/#MS33558 Slim" Margin="218,96,0,0" Width="215"/>
+        <Label x:Name="BattAmp" Content="BATT AMP           :" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15" Foreground="#66ff66" FontFamily="/Thunderfield-Wingman;component/Fonts/#MS33558 Slim" Margin="218,116,0,0" Width="215"/>
+        <Label x:Name="EngineMountVibration" Content="MOUNT VIBR       :" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15" Foreground="#66ff66" FontFamily="/Thunderfield-Wingman;component/Fonts/#MS33558 Slim" Margin="218,136,0,0" Width="215"/>
+        <Label x:Name="AlternatorAmp" Content="ALTR AMP           :" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15" Foreground="#66ff66" FontFamily="/Thunderfield-Wingman;component/Fonts/#MS33558 Slim" Margin="218,157,0,0" Width="215"/>
+        <Label x:Name="AlternatorVolt" Content="ALTR VOLT          :" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15" Foreground="#66ff66" FontFamily="/Thunderfield-Wingman;component/Fonts/#MS33558 Slim" Margin="218,178,0,0" Width="215"/>
+        <Label x:Name="TurboBoostPress" Content="TURBO BOOST   :" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15" Foreground="#66ff66" FontFamily="/Thunderfield-Wingman;component/Fonts/#MS33558 Slim" Margin="218,199,0,0" Width="215"/>
+        <Label x:Name="Altitude" Content="ALT                        :" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15" Foreground="#66ff66" FontFamily="/Thunderfield-Wingman;component/Fonts/#MS33558 Slim" Margin="218,220,0,0" Width="215"/>
+        <Label x:Name="GForce" Content="G  -   FORCE       :" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15" Foreground="#66ff66" FontFamily="/Thunderfield-Wingman;component/Fonts/#MS33558 Slim" Margin="218,259,0,0" Width="215"/>
+        <Label x:Name="AirSpeed" Content="AIR SPD               :" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15" Foreground="#66ff66" FontFamily="/Thunderfield-Wingman;component/Fonts/#MS33558 Slim" Margin="218,239,0,0" Width="215"/>
+
+        <Label x:Name="CCA" Content="0   CCA" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15" Foreground="#66ff66" FontFamily="/Thunderfield-Wingman;component/Fonts/#MS33558 Slim" Width="57" Height="25" Margin="6,379,0,0"/>
+        <Label x:Name="PerfMap" Content="1   PERF MAP" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="15" Foreground="#66ff66" FontFamily="/Thunderfield-Wingman;component/Fonts/#MS33558 Slim" Width="92" Height="25" Margin="0,379,0,0"/>
+        <Label x:Name="Back" Content="*   BACK" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15" Foreground="#66ff66" FontFamily="/Thunderfield-Wingman;component/Fonts/#MS33558 Slim" Width="63" Height="25" Margin="368,379,0,0"/>
+
+    </Grid>
+</Page>

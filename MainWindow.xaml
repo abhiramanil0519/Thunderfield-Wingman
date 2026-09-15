@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:thunderfield_wingman"
         mc:Ignorable="d"
-        Title="Thunderfield - Wingman" Height="450" Width="800">
+        Title="Thunderfield - Wingman" Height="450" Width="450">
 
     <Grid Background="Black">
 
@@ -16,7 +16,6 @@
                 VerticalAlignment="Center"
                 Width="800"/>
 
-        <!-- Boot page -->
         <Frame x:Name="MainFrame"
                NavigationUIVisibility="Hidden"/>
 
